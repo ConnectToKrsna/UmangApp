@@ -1,0 +1,234 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.event-container{
+    /* background-color: #706677; */
+    background-color:#1d2152;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.card-desc{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: relative; 
+    top: 65%;
+    /* left: 10%; */
+    padding-left: 10px;
+}
+.card-heading{  
+    font-size: 40px;
+    margin-bottom: 5px;
+    position: relative; 
+    top: 65%;
+    /* left: 5%;*/
+    padding-left: 10px;
+}
+.event-cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 40px; 
+}
+.event-card-1{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: url("rambhadraPrabhu2.jpg");
+    background-size: cover;
+    height: 50vh;
+    width: 80vh;
+    background-color: black;
+    margin-bottom: 20px;
+    /* flex-basis: 40%; */
+}
+.event-card-2{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: url("theatricalPerformance.jpg");
+    background-size: cover;
+    height: 50vh;
+    width: 80vh;
+    margin-bottom: 20px;
+    /* flex-basis: 40%; */
+}
+.event-card-3{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: url("panelDiscussion5.jpg");
+    background-size: cover;
+    height: 50vh;
+    width: 80vh;
+    margin-bottom: 20px;
+    color: white;
+}
+.card-3-desc{
+    
+    display: flex;
+    flex-direction: column;
+    /* color: whitesmoke; */
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative; 
+    top: 65%;
+    padding-left: 10px;
+    /* left: 10%; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card-3-heading{ 
+    font-weight: 800;
+    font-family: "Playwrite NG Modern", cursive;; 
+    /* color: #045F5F; */
+    font-size: 20px;
+    margin-bottom: 5px;
+    position: relative; 
+    top: 65%;
+    /* left: 10%; */
+    padding-left: 10px;
+}
+.event-card-4{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: url("rockDance.jpg");
+    background-size: cover;
+    height: 50vh;
+    width: 80vh;
+    margin-bottom: 20px;
+}
+.event-card-5{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: url("buffet-2.jpg");
+    background-size: cover;
+    height: 50vh;
+    width: 80vh;
+    margin-bottom: 20px;
+    /* flex-basis: 40%; */
+}
+.card-5-heading{  
+    font-size: 40px;
+    margin-bottom: 5px;
+    position: relative; 
+    top: 65%;
+}
+.event-card-6{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: url("joy.jpg");
+    background-size: cover;
+    height: 50vh;
+    width: 80vh;
+    margin-bottom: 20px;
+}
+@media(max-width:1000px){
+    .event-container{
+        flex-wrap: wrap;
+    }
+    .event-cards{
+        height: 100%;
+    width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        /* margin: 0 20px 0 20px; */
+        margin: auto;
+        justify-content: space-evenly;
+    }
+    .event-card-1{
+        flex-wrap: wrap;
+        height: 30vh;
+        width: 70vh;
+        margin-bottom: 40px;
+        background-size: cover;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .event-card-2{
+        height: 30vh;
+        width: 70vh;
+        flex-wrap: wrap;
+        /* height: 50vh;
+        width: 80vh; */
+        margin-bottom: 40px;
+        background-size: cover;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .event-card-3{
+        height: 30vh;
+        width: 70vh;
+        flex-wrap: wrap;
+        /* height: 50vh;
+        width: 80vh; */
+        margin-bottom: 40px;
+        background-size: cover;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .event-card-4{
+        height: 30vh;
+        width: 70vh;
+        flex-wrap: wrap;
+        /* height: 50vh;
+        width: 80vh; */
+        margin-bottom: 40px;
+        background-size: cover;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .event-card-5{
+        height: 30vh;
+        width: 70vh;
+        flex-wrap: wrap;
+        /* height: 50vh;
+        width: 80vh; */
+        margin-bottom: 40px;
+        background-size: cover;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .event-card-6{
+        height: 30vh;
+        width: 70vh;
+        flex-wrap: wrap;
+        /* height: 50vh;
+        width: 80vh; */
+        margin-bottom: 40px;
+        background-size: cover;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .card-heading{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .card-3-heading{
+        flex-wrap: wrap;
+        font-size: 20px;
+        margin: 0;
+    }
+    .card-desc{
+        flex-wrap: wrap; 
+        font-size: 14px;
+        margin: 0;
+    }
+    .card-3-desc{
+        flex-wrap: wrap; 
+        margin: 0;
+    }
+}
