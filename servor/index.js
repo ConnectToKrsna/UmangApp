@@ -43,7 +43,8 @@ app.post("/register",async (req,res)=>{
                 address:address,
                 remarks:remarks,
                 registeredBy:registeredBy})
-                .then(res.send(dataObj))
+                .then(user => {
+                    console.log('User created successfully:', user);})
                 .catch(err=>res.json(err))
 
         }
