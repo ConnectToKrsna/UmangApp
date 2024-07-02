@@ -6,7 +6,6 @@ const Register=require("./models/register.js")
 app.use(express.urlencoded({extended :true}))
 const cors=require('cors')
 app.use(cors())
-
 app.use(express.json())
 const http=require("http");
 // main()
@@ -25,8 +24,9 @@ connection.once('open', () => {
 });
 // }
 
-app.post("/register",(req,res)=>{
+app.post("/register",async (req,res)=>{
     // console.log(req)
+    let newRegister={}
     const {name,email,contact,occupation,
         address,remarks,registeredBy
     }=req.body;
@@ -37,17 +37,21 @@ app.post("/register",(req,res)=>{
             res.json("Already Have an Account")
         }
         else{
-            Register.create({name:name,
+                newRegister = new Register({name:name,
                 email:email,
                 contact:contact,
                 occupation:occupation,
                 address:address,
                 remarks:remarks,
                 registeredBy:registeredBy})
-                .then(res.send(dataObj))
+                .then()
                 .catch(err=>res.json(err))
+
         }
     }).catch(err=>res.json(err))
+    await newRegister.save();
+    console.log(newRegister)
+
     // newRegistration.save().then(res=>{res.json("Registration is Done")})
     // .catch((err)=>{res.json(err)})
     // Register.insertOne({
