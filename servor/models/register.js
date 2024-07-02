@@ -29,6 +29,10 @@ const registerSchema=new mongoose.Schema({
         type:String,
         // required:true,
     },
+    paid:{
+        type:Boolean,
+        default:false
+    }
 })
 const Register=mongoose.model("Register",registerSchema);
 module.exports=Register;
