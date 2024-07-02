@@ -69,6 +69,12 @@ app.post("/register",(req,res)=>{
     // res.send("Registartion done")
     
 })
+
+app.post('/update',async (req,res)=>{
+    console.log(req);
+})
+
+
 app.listen(8080,()=>{
     console.log("server is listening on port 8080")
 })
