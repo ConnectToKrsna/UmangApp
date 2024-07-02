@@ -16,7 +16,7 @@ const http=require("http");
 const uri = 'mongodb+srv://connecttokrishnanow:connecttokrishnanow@cluster0.klv9jyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 // async function main() {
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });  
+mongoose.connect(uri);  
 
 const connection = mongoose.connection;
 connection.once('open', () => {
