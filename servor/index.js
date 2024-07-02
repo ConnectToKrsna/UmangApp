@@ -5,13 +5,7 @@ const path=require("path")
 const Register=require("./models/register.js")
 app.use(express.urlencoded({extended :true}))
 const cors=require('cors')
-app.use(cors(
-  {
-    origin:["https://umang-app-634s-3zw49ojdg-shobhits-projects-deb589e5.vercel.app/"],
-    methods: ["POST","GET"],
-    credentials:true
-  }
-))
+
 app.use(express.json())
 const http=require("http");
 // main()
