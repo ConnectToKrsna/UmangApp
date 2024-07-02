@@ -25,8 +25,7 @@ connection.once('open', () => {
 // }
 
 app.post("/register",async (req,res)=>{
-    // console.log(req)
-    let newRegister={}
+    console.log(req.body)
     const {name,email,contact,occupation,
         address,remarks,registeredBy
     }=req.body;
@@ -37,20 +36,18 @@ app.post("/register",async (req,res)=>{
             res.json("Already Have an Account")
         }
         else{
-                newRegister = new Register({name:name,
+                Register.create({name:name,
                 email:email,
                 contact:contact,
                 occupation:occupation,
                 address:address,
                 remarks:remarks,
                 registeredBy:registeredBy})
-                .then()
+                .then(res.send(dataObj))
                 .catch(err=>res.json(err))
 
         }
     }).catch(err=>res.json(err))
-    await newRegister.save();
-    console.log(newRegister)
 
     // newRegistration.save().then(res=>{res.json("Registration is Done")})
     // .catch((err)=>{res.json(err)})
