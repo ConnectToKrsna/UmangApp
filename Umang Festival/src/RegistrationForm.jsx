@@ -54,7 +54,7 @@ export default function RegistrationForm(){
         e.preventDefault();
         let validated = await validate();
         if(validated==true){
-            axios.post('/register',{name,email,contact,occupation,address,remarks,registeredBy})
+            axios.post('https://umang-app-634s.vercel.app/register',{name,email,contact,occupation,address,remarks,registeredBy})
             .then(res=>{
                 if(res.data.name){
                     window.location.href = `https://pages.razorpay.com/pl_OTR30gjXUGdZ23/view?email=` + res.data.email + `&name=` + res.data.name + `&phone=` + res.data.contact;
