@@ -7,7 +7,7 @@ app.use(express.urlencoded({extended :true}))
 const cors=require('cors')
 app.use(cors(
   {
-    origin:["https://umang-app.vercel.app"],
+    origin:["https://umang-app-634s.vercel.app/"],
     methods: ["POST","GET"],
   }
 ))
