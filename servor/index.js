@@ -64,7 +64,7 @@ app.post("/register",(req,res)=>{
     // res.writeHead(200, { 'Content-Type': 'text/plain' });res.end();
     // res.redirect("./register");
     // res.headersSent();
-    return;
+    //return;
     
     // res.send("Registartion done")
     
