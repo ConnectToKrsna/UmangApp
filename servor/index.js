@@ -24,8 +24,8 @@ connection.once('open', () => {
 });
 // }
 
-app.post("/register",async (req,res)=>{
-    console.log(req.body)
+app.post("/register",(req,res)=>{
+    // console.log(req)
     const {name,email,contact,occupation,
         address,remarks,registeredBy
     }=req.body;
@@ -36,20 +36,17 @@ app.post("/register",async (req,res)=>{
             res.json("Already Have an Account")
         }
         else{
-                Register.create({name:name,
+            Register.create({name:name,
                 email:email,
                 contact:contact,
                 occupation:occupation,
                 address:address,
                 remarks:remarks,
                 registeredBy:registeredBy})
-                .then(user => {
-                    console.log('User created successfully:', user);})
+                .then(res.send(dataObj))
                 .catch(err=>res.json(err))
-
         }
     }).catch(err=>res.json(err))
-
     // newRegistration.save().then(res=>{res.json("Registration is Done")})
     // .catch((err)=>{res.json(err)})
     // Register.insertOne({
@@ -72,7 +69,7 @@ app.post("/register",async (req,res)=>{
     // res.send("Registartion done")
     
 })
-app.listen(5000,()=>{
+app.listen(8080,()=>{
     console.log("server is listening on port 8080")
 })
 
