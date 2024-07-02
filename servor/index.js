@@ -5,6 +5,7 @@ const path=require("path")
 const Register=require("./models/register.js")
 app.use(express.urlencoded({extended :true}))
 const cors=require('cors')
+app.use(cors())
 
 app.use(express.json())
 const http=require("http");
