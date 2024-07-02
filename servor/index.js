@@ -8,19 +8,28 @@ const cors=require('cors')
 app.use(cors())
 app.use(express.json())
 const http=require("http");
-main()
-.then(()=>{
-    console.log("connection successful")
-}).catch(err => console.log(err));
+// main()
+// .then(()=>{
+//     console.log("connection successful")
+// }).catch(err => console.log(err));
+// MongoDB connection
+const uri = 'mongodb+srv://connecttokrishnanow:connecttokrishnanow@cluster0.klv9jyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
-async function main() {
-  await mongoose.connect('mongodb://localhost:27017/test');
-}
+// async function main() {
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });  
+
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log('MongoDB database connection established successfully');
+});
+// }
+
 app.post("/register",(req,res)=>{
     // console.log(req)
     const {name,email,contact,occupation,
         address,remarks,registeredBy
     }=req.body;
+    let dataObj={name,email,contact};
     Register.findOne({email:email})
     .then(user=>{
         if(user){
@@ -34,7 +43,7 @@ app.post("/register",(req,res)=>{
                 address:address,
                 remarks:remarks,
                 registeredBy:registeredBy})
-                .then((res)=>{res.json("Account Created");req.send})
+                .then(res.send(dataObj))
                 .catch(err=>res.json(err))
         }
     }).catch(err=>res.json(err))
@@ -56,9 +65,11 @@ app.post("/register",(req,res)=>{
     // res.redirect("./register");
     // res.headersSent();
     return;
-    res.end("Registartion done")
+    
+    // res.send("Registartion done")
     
 })
-app.listen(8080,()=>{
+app.listen(5000,()=>{
     console.log("server is listening on port 8080")
 })
+

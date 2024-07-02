@@ -116,6 +116,10 @@ ul.features li:before {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
 }
+.btn-purchase:hover{
+    color:#EB5406;
+    cursor: pointer;
+}
 
 @media(max-width:1000px) {
     .action-container {

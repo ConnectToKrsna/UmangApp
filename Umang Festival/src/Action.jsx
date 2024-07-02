@@ -2,7 +2,12 @@ import "./Action.css"
 import Title from "./Title"
 import DoneIcon from '@mui/icons-material/Done';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import { useNavigate } from 'react-router-dom';
 export default function Action(){
+    const navigate = useNavigate();
+    const handleRedirect = () => {
+        navigate('/register');
+      };
     return(
         <div className="action-container">
             <div className="plate-1">
@@ -31,7 +36,7 @@ export default function Action(){
                     <li>Theatre</li>
                     <li>Dinner Buffet</li>
                 </ul>
-                    <button className="btn-purchase">Purchase Ticket</button>
+                    <button className="btn-purchase" onClick={handleRedirect}>Purchase Ticket</button>
             </div>
         </div>
     )
