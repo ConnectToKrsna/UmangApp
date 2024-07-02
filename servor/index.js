@@ -73,6 +73,25 @@ app.post("/register",(req,res)=>{
 app.post('/update',async (req,res)=>{
     console.log('webhook triggered');
     console.log(req.body.payload.payment.entity.email);
+    paidEmail = req.body.payload.payment.entity.email;
+    try {
+        // Find the user by email and update their details
+        const updatedUser = await Register.findOneAndUpdate(
+          { paidEmail },
+          { paid:true },
+          { new: false, runValidators: true }
+        );
+    
+        if (!updatedUser) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+    
+        console.log('User updated successfully:', updatedUser);
+        res.json({ message: 'User updated successfully', user: updatedUser });
+      } catch (err) {
+        console.error('Error updating user:', err);
+        res.status(400).json({ error: err.message });
+      }
 
 })
 
