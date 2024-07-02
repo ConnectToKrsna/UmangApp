@@ -72,7 +72,7 @@ app.post("/register",(req,res)=>{
 
 app.post('/update',async (req,res)=>{
     console.log('webhook triggered');
-    console.log(req.body.payload);
+    console.log(req.body.payload.payment.entity.email);
 
 })
 
