@@ -26,6 +26,7 @@ padding: 0;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    width: 100%;
 }
 .about-1{
     display: flex;
@@ -81,11 +82,16 @@ img{
         margin: 0;
         flex-direction: column;
         justify-content: center;
+        /* width: 100%; */
     }
     .about-1{
         margin: 0;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
+    }
+    .des{
+        width: 80%;
     }
     /* img {
         width: 100%;

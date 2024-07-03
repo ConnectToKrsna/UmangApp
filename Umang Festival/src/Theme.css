@@ -73,9 +73,13 @@
      .part-1{
         flex-wrap: wrap;  
         flex-direction: column;
+        width: 100%;
     } 
     .part-2{
         flex-wrap: wrap;
+    }
+    .para{
+        width: 80%;
     }
     .img-glory{
         margin-top: 20px;

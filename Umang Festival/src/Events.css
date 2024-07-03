@@ -68,12 +68,12 @@ body{
     display: flex;
     border: 1px solid white;
     border-radius: 5px;
-    background-image: url("panelDiscussion5.jpg");
+    background-image: url("panelDiscussion6.jpeg");
     background-size: cover;
     height: 50vh;
     width: 80vh;
     margin-bottom: 20px;
-    color: white;
+    color: red;
 }
 .card-3-desc{
     
@@ -103,7 +103,7 @@ body{
     display: flex;
     border: 1px solid white;
     border-radius: 5px;
-    background-image: url("rockDance.jpg");
+    background-image: url("rockDance2.jpeg");
     background-size: cover;
     height: 50vh;
     width: 80vh;

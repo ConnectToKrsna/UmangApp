@@ -67,14 +67,14 @@ export default function RegistrationForm(){
     }
     return(
         <>
-        <div className="wrapper">
+        {/* <div className="wrapper">
         <div className="video-bg">
         <video  autoPlay loop muted>
         <source src="https://res.cloudinary.com/dwneljbds/video/upload/v1718181670/Umang_is_back_AGAIN_howsthejosh_online-video-cutter.com_1_cmhxk6.mp4"/></video>
 
-         </div>
-         <div className="wrapper2">
-
+         </div> */}
+         {/* <div className="wrapper2"> */}
+        
         <div className="container-reg">
         <h1 className="form-title-reg">Umang Registration</h1>
         <form className='form1' onSubmit={handleSubmit} name="Registration-Form" id="Registration-Form">
@@ -120,8 +120,8 @@ export default function RegistrationForm(){
         </div>
         </form>
         </div>
-    </div>
-    </div>
+    {/* </div>
+    </div> */}
         </>
     )
 }

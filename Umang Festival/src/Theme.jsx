@@ -9,7 +9,7 @@ export default function Theme() {
                     Theme
                 </div>
                 <div className="title">
-                    <Title title={"Kab Honge Kamyab ?"} size={"32px"} />
+                    <Title title={"Kab Honge Kamyab ?"} size={"30px"} />
                 </div>
                 <div className="para">
                     Once titled Golden Bird, Vishwa Guru, India has now come way ahead only to
