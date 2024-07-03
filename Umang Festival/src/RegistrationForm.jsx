@@ -74,7 +74,7 @@ export default function RegistrationForm(){
 
          </div> */}
          {/* <div className="wrapper2"> */}
-        
+        <div className="regform-container">
         <div className="container-reg">
         <h1 className="form-title-reg">Umang Registration</h1>
         <form className='form1' onSubmit={handleSubmit} name="Registration-Form" id="Registration-Form">
@@ -122,6 +122,7 @@ export default function RegistrationForm(){
         </div>
     {/* </div>
     </div> */}
+    </div>
         </>
     )
 }
