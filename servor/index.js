@@ -72,9 +72,11 @@ app.post("/register",(req,res)=>{
 
 app.post('/update',async (req,res)=>{
     console.log('webhook triggered');
-    console.log(req.body.payload.payment.entity.email);
-    console.log(req.rawHeaders[1]);
-    paidEmail = req.body.payload.payment.entity.email;
+    paidEmail = req.body.email;
+    // console.log(req.body.payload.payment.entity.email);
+    // console.log(req.body.payload);
+    // paidEmail = req.body.payload.payment.entity.email;
+    console.log(paidEmail)
     try {
         // Find the user by email and update their details
         const updatedUser = await Register.findOneAndUpdate(
@@ -84,10 +86,7 @@ app.post('/update',async (req,res)=>{
         );
     
         if (!updatedUser) {
-          console.log("user not updated");
-          console.log(updatedUser);
           return res.status(404).json({ message: 'User not found' });
-          
         }
     
         console.log('User updated successfully:', updatedUser);
