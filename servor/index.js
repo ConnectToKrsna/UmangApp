@@ -73,7 +73,7 @@ app.post("/register",(req,res)=>{
 app.post('/update',async (req,res)=>{
     console.log('webhook triggered');
     console.log(req.body.payload.payment.entity.email);
-    console.log(req);
+    console.log(req.rawHeaders[1]);
     paidEmail = req.body.payload.payment.entity.email;
     try {
         // Find the user by email and update their details
@@ -85,7 +85,7 @@ app.post('/update',async (req,res)=>{
     
         if (!updatedUser) {
           console.log("user not updated");
-          console.log("updatedUser");
+          console.log(updatedUser);
           return res.status(404).json({ message: 'User not found' });
           
         }
