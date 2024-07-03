@@ -72,19 +72,21 @@ app.post("/register",(req,res)=>{
 
 app.post('/update',async (req,res)=>{
     console.log('webhook triggered');
-    paidEmail = req.body.email;
-    // console.log(req.body.payload.payment.entity.email);
-    // console.log(req.body.payload);
-    // paidEmail = req.body.payload.payment.entity.email;
+    //paidEmail = req.body.email;
+    console.log(req.body.payload.payment.entity.email);
+    console.log(req.body.payload);
+    paidEmail = req.body.payload.payment.entity.email;
     console.log(paidEmail)
     try {
         // Find the user by email and update their details
-        const updatedUser = await Register.findOneAndUpdate(
-          { paidEmail },
-          { paid:true },
-          { new: false, runValidators: true }
-        );
-    
+        const User = await Register.findOne({email:paidEmail})
+        console.log(User);
+
+            // Update the paid status
+        User.paid = true;
+
+        // // Save the updated user
+        const updatedUser = await User.save();
         if (!updatedUser) {
           return res.status(404).json({ message: 'User not found' });
         }
