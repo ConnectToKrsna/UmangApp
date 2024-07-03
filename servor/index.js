@@ -74,29 +74,35 @@ app.post('/update',async (req,res)=>{
     console.log('webhook triggered');
     //paidEmail = req.body.email;
     console.log(req.body.payload.payment.entity.email);
-    console.log(req.rawHeader[1]);
-    paidEmail = req.body.payload.payment.entity.email;
-    console.log(paidEmail)
-    try {
-        // Find the user by email and update their details
-        const User = await Register.findOne({email:paidEmail})
-        console.log(User);
+    console.log(req.rawHeaders[1]);
+    if(req.rawHeaders[1] == 'umangapp.onrender.com'){
 
-            // Update the paid status
-        User.paid = true;
-
-        // // Save the updated user
-        const updatedUser = await User.save();
-        if (!updatedUser) {
-          return res.status(404).json({ message: 'User not found' });
-        }
+        paidEmail = req.body.payload.payment.entity.email;
+        console.log(paidEmail)
+        try {
+            // Find the user by email and update their details
+            const User = await Register.findOne({email:paidEmail})
+            console.log(User);
     
-        console.log('User updated successfully:', updatedUser);
-        res.json({ message: 'User updated successfully', user: updatedUser });
-      } catch (err) {
-        console.error('Error updating user:', err);
-        res.status(400).json({ error: err.message });
-      }
+                // Update the paid status
+            User.paid = true;
+    
+            // // Save the updated user
+            const updatedUser = await User.save();
+            if (!updatedUser) {
+              return res.status(404).json({ message: 'User not found' });
+            }
+        
+            console.log('User updated successfully:', updatedUser);
+            res.json({ message: 'User updated successfully', user: updatedUser });
+          } catch (err) {
+            console.error('Error updating user:', err);
+            res.status(400).json({ error: err.message });
+          }
+
+    }else{
+        res.send('not an umang registration');
+    }
 
 })
 
