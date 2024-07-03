@@ -84,7 +84,10 @@ app.post('/update',async (req,res)=>{
         );
     
         if (!updatedUser) {
+          console.log("user not updated");
+          console.log("updatedUser");
           return res.status(404).json({ message: 'User not found' });
+          
         }
     
         console.log('User updated successfully:', updatedUser);
