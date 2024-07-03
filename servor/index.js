@@ -74,7 +74,7 @@ app.post('/update',async (req,res)=>{
     console.log('webhook triggered');
     //paidEmail = req.body.email;
     console.log(req.body.payload.payment.entity.email);
-    console.log(req.body.payload);
+    console.log(req.rawHeader[1]);
     paidEmail = req.body.payload.payment.entity.email;
     console.log(paidEmail)
     try {
