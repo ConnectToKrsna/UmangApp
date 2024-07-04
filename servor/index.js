@@ -106,6 +106,10 @@ app.post('/update',async (req,res)=>{
 
 })
 
+app.get("/wakeUp", async (req,res)=>{
+    res.send("Yes I'm Awake, Chill out! Haribol!")
+    console.log("Yes I'm Awake, Chill out! Haribol!")
+})
 
 app.listen(8080,()=>{
     console.log("server is listening on port 8080")
