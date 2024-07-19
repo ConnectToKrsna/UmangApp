@@ -26,7 +26,7 @@ export default function Action(){
                     Full Access
                 </div>
                 <div className="price">
-                    Rs.100/
+                    ₹200/-
                 </div>
                 <ul className="features">
                     <li>
