@@ -24,9 +24,9 @@ export default function Events(){
                     <div className="card-heading">
                         <Title title={"Theatrical Performance"} size={"20px"}></Title>
                     </div>
-                    <div className="card-desc">
+{/*                     <div className="card-desc">
                         Hg Rambhadra Prabhu
-                    </div>
+                    </div> */}
                     </div>
                 </div>
                 {/* </div> */}
