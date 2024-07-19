@@ -12,16 +12,16 @@ export default function RegistrationForm(){
     const [registeredBy,setRegisteredBy]=useState("")
     const [remarks,setRemarks]=useState("")
 
-    useEffect(() => {
-        // Reset state values when the component mounts or reloads
-        setName('');
-        setEmail('');
-        setContact('');
-        setOccupation('');
-        setAddress('');
-        setRegisteredBy('');
-        setRemarks('');
-      }, []);
+    // useEffect(() => {
+    //     // Reset state values when the component mounts or reloads
+    //     setName('');
+    //     setEmail('');
+    //     setContact('');
+    //     setOccupation('');
+    //     setAddress('');
+    //     setRegisteredBy('');
+    //     setRemarks('');
+    //   }, []);
 
     const validate=()=>{
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -51,7 +51,7 @@ export default function RegistrationForm(){
         }
     }
     const handleSubmit= async (e)=>{
-        e.preventDefault();
+        // e.preventDefault();
         let validated = await validate();
         if(validated==true){
             axios.post('https://umangapp.onrender.com/register',{name,email,contact,occupation,address,remarks,registeredBy})
