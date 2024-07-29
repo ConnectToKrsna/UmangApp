@@ -50,6 +50,7 @@
     font-family: "Poppins", sans-serif;
     font-style: normal;
     color: red;
+    text-decoration: line-through;
 }
 
 .action-title {
