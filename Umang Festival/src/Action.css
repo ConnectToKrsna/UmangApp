@@ -46,10 +46,10 @@
     justify-content: center;
     margin-top: 20px;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 400;
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    color: red;
+    color: black;
     text-decoration: line-through;
 }
 
@@ -63,7 +63,7 @@
     font-family: "Poppins", sans-serif;
     font-style: normal;
     color: red;
-    text-decoration: line-through;
+    
 }
 
 .action-title {
