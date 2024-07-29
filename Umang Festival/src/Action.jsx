@@ -31,6 +31,9 @@ export default function Action(){
                 <div className="price2">
                     ₹100/-
                 </div>
+                <div className="offer">
+                    * Offer Valid Till 04 August *
+                </div>
                 <ul className="features">
                     <li>
                     Seminar</li>
