@@ -115,8 +115,11 @@ export default function RegistrationForm(){
                 onChange={(e)=>setRegisteredBy(e.target.value)}/>
             </div>
         </div>
-        <div className="form-submit-btn">
+{/*         <div className="form-submit-btn">
             <input type="submit" value="Register"/>
+        </div> */}
+        <div className="form-submit-btn">
+            <button onClick={handleSubmit}>Register</button>
         </div>
         </form>
         </div>
