@@ -51,7 +51,7 @@ export default function RegistrationForm(){
         }
     }
     const handleSubmit= async (e)=>{
-        // e.preventDefault();
+        e.preventDefault();
         let validated = await validate();
         if(validated==true){
             axios.post('https://umangapp.onrender.com/register',{name,email,contact,occupation,address,remarks,registeredBy})
