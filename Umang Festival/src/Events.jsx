@@ -15,7 +15,7 @@ export default function Events(){
                         <Title title={"Enlightening Talk"} size={"20px"}></Title>
                     </div>
                     <div className="card-desc">
-                        Hg Rambhadra Prabhu
+                        Hg Arvindaksha Madhav Prabhuji
                     </div>
                     </div>
                 </div>
